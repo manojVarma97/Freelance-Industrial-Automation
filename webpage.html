@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Automation Engineer | Independent Consulting Services Bangalore</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 { 
+            font-size: 3rem; 
+            margin-bottom: 1rem; 
+            animation: fadeInUp 1s;
+        }
+        
+        .hero p { 
+            font-size: 1.3rem; 
+            margin-bottom: 2rem; 
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0.5rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .cta-button.whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .cta-button.email {
+            background: #EA4335;
+            color: white;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .skill-card h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .services { background: #f8f9fa; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .about { 
+            text-align: center; 
+            background: #f8f9fa;
+        }
+        
+        .about p { 
+            max-width: 800px; 
+            margin: 0 auto 1.5rem; 
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number { 
+            font-size: 3rem; 
+            font-weight: bold; 
+            color: #667eea; 
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        .contact {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item strong {
+            font-size: 1.2rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer a { 
+            color: #aaa; 
+            text-decoration: none; 
+            margin: 0 0.5rem; 
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .disclaimer {
+            background: #2a2a2a;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav ul { gap: 1rem; font-size: 0.9rem; }
+            .stats { gap: 2rem; }
+            nav { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Industrial Automation Freelance</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h1>Industrial Automation & Control Engineer</h1>
+    <p>PLC, HMI, SCADA, DCS & Node-RED | Independent Consulting Services</p>
+    <div>
+        <a href="#contact" class="cta-button">Get In Touch</a>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Core Expertise</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h3>PLC Programming</h3>
+            <p>Extensive experience with Siemens, Allen-Bradley, Schneider Electric, and Mitsubishi. Proficient in ladder logic, structured text, and function block programming.</p>
+        </div>
+        <div class="skill-card">
+            <h3>HMI / SCADA</h3>
+            <p>Development and implementation of WinCC, Wonderware, Ignition, and other leading SCADA platforms for real-time monitoring and control.</p>
+        </div>
+        <div class="skill-card">
+            <h3>DCS Integration</h3>
+            <p>Distributed Control Systems design for complex industrial processes with field device integration and control strategies.</p>
+        </div>
+        <div class="skill-card">
+            <h3>Node-RED & IoT</h3>
+            <p>IoT integration and data flow automation. Creating custom dashboards and connecting industrial equipment to cloud platforms.</p>
+        </div>
+        <div class="skill-card">
+            <h3>System Integration</h3>
+            <p>Protocol expertise including Modbus, OPC, Profinet, and Ethernet/IP for seamless system integration.</p>
+        </div>
+        <div class="skill-card">
+            <h3>Troubleshooting</h3>
+            <p>Rapid diagnosis and resolution of automation system issues to minimize downtime and optimize performance.</p>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services">
+    <h2>Independent Consulting Services</h2>
+    <div class="services-grid">
+        <div class="service-item">
+            <h3>💡 Automation Consulting</h3>
+            <p>Strategic guidance for automation projects and technology selection</p>
+        </div>
+        <div class="service-item">
+            <h3>⚙️ PLC Programming & Commissioning</h3>
+            <p>Complete programming services from design to commissioning</p>
+        </div>
+        <div class="service-item">
+            <h3>📊 SCADA / HMI Development</h3>
+            <p>Custom solutions with intuitive interfaces and data visualization</p>
+        </div>
+        <div class="service-item">
+            <h3>🔧 Troubleshooting & Support</h3>
+            <p>Technical support to minimize downtime and ensure continuity</p>
+        </div>
+        <div class="service-item">
+            <h3>🌐 IoT & Node-RED Integration</h3>
+            <p>Industry 4.0 solutions connecting equipment to IoT platforms</p>
+        </div>
+        <div class="service-item">
+            <h3>📚 Training & Documentation</h3>
+            <p>Comprehensive training and detailed technical documentation</p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>About</h2>
+    <p>
+        I am an Automation and Control Engineer based in Whitefield, Bangalore, providing 
+        selective independent consulting assignments strictly outside regular employment hours.
+    </p>
+    <p>
+        All services are delivered in personal capacity using independently owned tools and resources, 
+        ensuring complete transparency and no conflicts of interest.
+    </p>
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Core Technologies</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Independent</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Available</div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <p style="margin-bottom: 2rem; font-size: 1.1rem;">Ready to discuss your automation project? Contact me for a consultation.</p>
+    
+    <div class="contact-info">
+        <div class="contact-item">
+            <strong>📍 Location</strong>
+            <span>Whitefield, Bangalore</span>
+        </div>
+        <div class="contact-item">
+            <strong>📧 Email</strong>
+            <span>manojvarmagottumukkala999@gmail.com</span>
+        </div>
+        <div class="contact-item">
+            <strong>📱 Phone</strong>
+            <span>+91 95027 20470</span>
+        </div>
+    </div>
+
+    <div class="contact-buttons">
+        <a href="https://wa.me/919502720470?text=Hi,%20I'm%20interested%20in%20your%20industrial%20automation%20consulting%20services.%20I'd%20like%20to%20discuss%20a%20project." class="cta-button whatsapp">💬 WhatsApp Chat</a>
+        <a href="mailto:manojvarmagottumukkala999@gmail.com?subject=Automation%20Consulting%20Inquiry&body=Hello,%0D%0A%0D%0AI'm%20interested%20in%20your%20automation%20consulting%20services.%0D%0A%0D%0AProject%20Details:%0D%0A-%20%0D%0A%0D%0APlease%20contact%20me%20to%20discuss%20further.%0D%0A%0D%0AThank%20you!" class="cta-button email">📧 Send Email</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 Industrial Automation Freelance | Whitefield, Bangalore</p>
+
+    <div class="disclaimer">
+        <strong>Legal Disclaimer:</strong><br>
+        All services are provided independently in personal capacity and strictly outside regular employment hours. 
+        This website and its services do not represent or conflict with any current or past employer. 
+        All work is performed using personally owned tools, resources, and equipment. 
+        Client confidentiality and professional ethics are strictly maintained.
+    </div>
+
+    <p style="margin-top:1.5rem; font-size: 0.9rem;">
+        <a href="#contact">Contact</a> |
+        <a href="mailto:manojvarmagottumukkala999@gmail.com">Email</a> |
+        <a href="https://wa.me/919502720470">WhatsApp</a>
+    </p>
+</footer>
+
+</body>
+</html>
